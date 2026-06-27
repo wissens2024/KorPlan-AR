@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+*.pt
+*.ckpt
+data/raw/
+data/staging/
+data/processed/
+*.png
+*.svg
+*.dxf
+.DS_Store
