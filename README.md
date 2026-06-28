@@ -64,3 +64,13 @@ MIT (see `LICENSE`). Source datasets and trained models are governed by their pr
 Oh, J.C.; Park, J.W. Building-Code-Aware Autoregressive Vector Floor-Plan Generation
 with Modular Regulatory Verification. (under review).
 ```
+
+## Regulatory rule records
+
+The modular regulatory verifier (`src/plan2graph/rules_legal.py`) is grounded in current Korean
+statutes retrieved from the Korea Law Information Center Open API (`src/plan2graph/law_api.py`).
+The machine-readable rule database (`legal/rules.json`) maps each implemented rule to its statute
+article and Korea Law Information Center serial number (MST), and the full retrieved statute text is
+cached under `legal/law_cache/` (e.g., `law_279461.xml` for the daylighting/ventilation rule,
+Art. 17, "windows for daylighting and ventilation"). Non-statutory reference design values are
+flagged as such and excluded from statutory-compliance claims.
